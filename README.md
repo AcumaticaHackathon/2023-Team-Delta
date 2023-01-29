@@ -24,9 +24,9 @@ Add your possible file categories and their descriptions.  These categories are
 
 Here you can configure keywords and the category you wish to associate those keywords too.  When attaching files containing text, these keywords will be used to automatically select a category.   
 
-<b>Category ID:</b> Select the category from a list of categories configured under Category Configuration 
-<b>Word Delimiter ID:</b> Enter a Word Delimiter (, - etc) to separate different words required to be found to categorize based on these keywords. 
-<b>Threshold Delimiter ID:</b> Add Threshold Delimiter and use that delimiter followed by a number to categorize based on a keyword  that occurs that number of times. 
+<b>Category ID:</b> Select the category from a list of categories configured under Category Configuration <br />
+<b>Word Delimiter ID:</b> Enter a Word Delimiter (, - etc) to separate different words required to be found to categorize based on these keywords. <br />
+<b>Threshold Delimiter ID:</b> Add Threshold Delimiter and use that delimiter followed by a number to categorize based on a keyword  that occurs that number of times. <br /> 
 ![img3](https://user-images.githubusercontent.com/43068046/215348642-a07c18ae-bd80-4210-90c5-60ab4d510e4e.png)
 
 
