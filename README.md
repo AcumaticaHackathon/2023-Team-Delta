@@ -11,8 +11,8 @@ This is the repository for Team Delta's Hackathon project that was held on Janua
 
 ### Categories
 
+Add your possible file categories and their descriptions.  These categories are used with the Advanced File Management feature and can be associated in the Rules Screen.
 ![img2](https://user-images.githubusercontent.com/43068046/215348629-b245ea67-76d3-4f6e-82fd-ebcc93bc663d.png)
-
 
 #### Category Preferences
 
@@ -20,6 +20,11 @@ This is the repository for Team Delta's Hackathon project that was held on Janua
 
 #### Category Rules
 
+Here you can configure keywords and the category you wish to associate those keywords too.  When attaching files containing text, these keywords will be used to automatically select a category.   
+
+<b>Category ID:</b> Select the category from a list of categories configured under Category Configuration 
+<b>Word Delimiter ID:</b> Enter a Word Delimiter (, - etc) to separate different words required to be found to categorize based on these keywords. 
+<b>Threshold Delimiter ID:</b> Add Threshold Delimiter and use that delimiter followed by a number to categorize based on a keyword  that occurs that number of times. 
 ![img3](https://user-images.githubusercontent.com/43068046/215348642-a07c18ae-bd80-4210-90c5-60ab4d510e4e.png)
 
 
