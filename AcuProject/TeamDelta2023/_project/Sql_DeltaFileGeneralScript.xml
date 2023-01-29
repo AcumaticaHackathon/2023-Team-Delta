@@ -1,13 +1,9 @@
-﻿<Sql TableName="DeltaFileGeneralScript" CustomScript="#CDATA">
+﻿<Sql TableName="DeltaFileGeneralScript" SqlScriptPriority="100" CustomScript="#CDATA">
     <CDATA name="CustomScript"><![CDATA[CREATE OR ALTER VIEW [DeltaFileGeneral] AS
-select 
-	ulf.FileID,
-	ulf.Name,
-	dfd.Category,
-	dfd.Summary
-
-from 
-		UploadFile ulf
-		LEFT JOIN DeltaFileDetails dfd on dfd.FileID = ulf.FileID
+SELECT        ulf.FileID, ulf.Name, dfd.Summary, MAX(dfd.lineNbr) AS LineNbr, dbo.DeltaCategory.Name AS Category
+FROM            dbo.DeltaCategory RIGHT OUTER JOIN
+                         dbo.DeltaFileDetails AS dfd ON dbo.DeltaCategory.CompanyID = dfd.CompanyID AND dbo.DeltaCategory.CategoryID = dfd.CategoryID RIGHT OUTER JOIN
+                         dbo.UploadFile AS ulf ON dfd.CompanyID = ulf.CompanyID AND dfd.FileID = ulf.FileID
+GROUP BY ulf.FileID, ulf.Name, dfd.Summary, dbo.DeltaCategory.Name
 GO]]></CDATA>
 </Sql>

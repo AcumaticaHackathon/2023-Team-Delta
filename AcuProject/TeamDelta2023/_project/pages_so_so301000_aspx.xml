@@ -47,6 +47,7 @@
                             </PXGrid>
                         </AddItem>
                     </Children>
+                    <Prop Key="LoadOnDemand" Value="True" />
                 </PXTabItem>
             </AddItem>
             <PXTabItem Text="Approvals" OriginalIndex="7" />

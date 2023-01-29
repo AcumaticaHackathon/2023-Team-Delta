@@ -32,7 +32,7 @@
                 </row>
             </SiteMap>
             <MUIWorkspace>
-                <row IsPortal="0" WorkspaceID="d69c8726-2347-4e09-8fcb-e9dbe222f38a" Order="875" Title="Advanced File Management" Icon="attach_file" IsSystem="0" />
+                <row IsPortal="0" WorkspaceID="d69c8726-2347-4e09-8fcb-e9dbe222f38a" Order="875" Title="Adv. File Mgmt." Icon="attach_file" IsSystem="0" />
             </MUIWorkspace>
             <MUISubcategory>
                 <row IsPortal="0" SubcategoryID="6d40b0b6-18f4-4139-adac-8ec8cb2a17ea" Order="128" Name="Profiles" Icon="" IsSystem="0" />

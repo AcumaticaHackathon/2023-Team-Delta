@@ -11,17 +11,7 @@
 		</CallbackCommands>
 	</px:PXDataSource>
 </asp:Content>
-<asp:Content ID="cont2" ContentPlaceHolderID="phF" Runat="Server">
-	<px:PXFormView ID="form" runat="server" DataSourceID="ds" DataMember="MasterView" Width="100%" Height="" AllowAutoHide="false">
-		<Template>
-			<px:PXLayoutRule runat="server" ID="CstPXLayoutRule3" StartColumn="True" ></px:PXLayoutRule>
-			<px:PXTextEdit Size="200px" runat="server" ID="CstPXTextEdit4" DataField="NameFilter" ></px:PXTextEdit>
-			<px:PXLayoutRule runat="server" ID="CstPXLayoutRule2" StartColumn="True" ></px:PXLayoutRule>
-			<px:PXTextEdit Size="200px" runat="server" ID="CstPXTextEdit5" DataField="CategoryFilter" ></px:PXTextEdit>
-			<px:PXLayoutRule runat="server" ID="CstPXLayoutRule1" StartColumn="True" ></px:PXLayoutRule>
-			<px:PXTextEdit Size="200px" runat="server" ID="CstPXTextEdit6" DataField="SummaryFilter" ></px:PXTextEdit></Template>
-	</px:PXFormView>
-</asp:Content>
+<asp:Content ID="cont2" ContentPlaceHolderID="phF" Runat="Server"></asp:Content>
 <asp:Content ID="cont3" ContentPlaceHolderID="phG" Runat="Server">
 	<px:PXGrid ID="grid" runat="server" DataSourceID="ds" Width="100%" Height="150px" SkinID="Details" AllowAutoHide="false">
 		<Levels>

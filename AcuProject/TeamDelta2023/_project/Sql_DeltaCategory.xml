@@ -12,6 +12,10 @@
   <col name="LastModifiedByScreenID" type="Char(8)" />
   <col name="tstamp" type="Timestamp" />
   <col name="NoteID" type="UniqueIdentifier" />
+  <index name="DeltaCategory_NoteID" unique="true">
+    <col name="NoteID" />
+    <col name="CompanyID" />
+  </index>
   <index name="DeltaCategory_PK" clustered="true" primary="true" unique="true">
     <col name="CompanyID" />
     <col name="CategoryID" />

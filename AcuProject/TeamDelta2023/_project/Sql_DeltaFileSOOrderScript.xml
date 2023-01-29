@@ -1,17 +1,11 @@
-﻿<Sql TableName="DeltaFileSOOrderScript" CustomScript="#CDATA">
+﻿<Sql TableName="DeltaFileSOOrderScript" SqlScriptPriority="100" CustomScript="#CDATA">
     <CDATA name="CustomScript"><![CDATA[CREATE OR ALTER VIEW [DeltaFileSOOrder] AS
-select 
-	so.OrderType,
-	so.OrderNbr,
-	ulf.FileID,
-	ulf.Name,
-	dfd.Category,
-	dfd.Summary
-
-from 
-	SOOrder so
-		JOIN NoteDoc on NoteDoc.NoteID = so.NoteID
-		JOIN UploadFile ulf on ulf.FileID = NoteDoc.FileID
-		LEFT JOIN DeltaFileDetails dfd on dfd.FileID = ulf.FileID
+SELECT        so.OrderType, so.OrderNbr, ulf.FileID, ulf.Name, dfd.Summary, MAX(dfd.lineNbr) AS LineNbr, dbo.DeltaCategory.Name AS Category
+FROM            dbo.DeltaCategory RIGHT OUTER JOIN
+                         dbo.DeltaFileDetails AS dfd ON dbo.DeltaCategory.CompanyID = dfd.CompanyID AND dbo.DeltaCategory.CategoryID = dfd.CategoryID RIGHT OUTER JOIN
+                         dbo.SOOrder AS so INNER JOIN
+                         dbo.NoteDoc ON dbo.NoteDoc.NoteID = so.NoteID AND so.CompanyID = dbo.NoteDoc.CompanyID INNER JOIN
+                         dbo.UploadFile AS ulf ON ulf.FileID = dbo.NoteDoc.FileID AND dbo.NoteDoc.CompanyID = ulf.CompanyID ON dfd.CompanyID = ulf.CompanyID AND dfd.FileID = ulf.FileID
+GROUP BY so.OrderType, so.OrderNbr, ulf.FileID, ulf.Name, dfd.Summary, dbo.DeltaCategory.Name
 GO]]></CDATA>
 </Sql>

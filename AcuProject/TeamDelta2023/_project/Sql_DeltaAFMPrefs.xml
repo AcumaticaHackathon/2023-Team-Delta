@@ -1,7 +1,6 @@
 ﻿<Sql TableName="DeltaAFMPrefs" TableSchemaXml="#CDATA">
     <CDATA name="TableSchemaXml"><![CDATA[<table name="DeltaAFMPrefs">
   <col name="CompanyID" type="Int" default="Zero" />
-  <col name="AFMPrefsID" type="Int" identity="true" />
   <col name="IsOcrEnabled" type="Bit" />
   <col name="CreatedByID" type="UniqueIdentifier" />
   <col name="CreatedByScreenID" type="Char(8)" />
@@ -11,9 +10,12 @@
   <col name="LastModifiedDateTime" type="DateTime" />
   <col name="tstamp" type="Timestamp" />
   <col name="NoteID" type="UniqueIdentifier" />
-  <index name="DeltaAFMPrefs_PK" clustered="true" primary="true" unique="true">
+  <index name="DeltaAFMPrefs_NoteID" unique="true">
+    <col name="NoteID" />
     <col name="CompanyID" />
-    <col name="AFMPrefsID" />
+  </index>
+  <index name="PK_DeltaAFMPrefs" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
   </index>
 </table>]]></CDATA>
 </Sql>
