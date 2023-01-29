@@ -7,6 +7,8 @@ This is the repository for Team Delta's Hackathon project that was held on Janua
 ![img1](https://user-images.githubusercontent.com/43068046/215348606-8b477a3b-1c82-4665-a538-077ab9a52eff.png)
 
 ### Process Flow
+
+The process flow ilistrates the process of the advance document management
   ![image](https://user-images.githubusercontent.com/43068046/215345051-64be6b6f-622b-40ea-b64c-fd7a57d23359.png)
 
 ### Categories
