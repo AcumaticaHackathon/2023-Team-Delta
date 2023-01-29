@@ -1,0 +1,24 @@
+﻿<Sql TableName="DeltaCategoryRules" TableSchemaXml="#CDATA">
+    <CDATA name="TableSchemaXml"><![CDATA[<table name="DeltaCategoryRules">
+  <col name="CompanyID" type="Int" default="Zero" />
+  <col name="RuleID" type="Int" identity="true" />
+  <col name="CategoryID" type="Int" />
+  <col name="WordDelimiterID" type="Int" nullable="true" />
+  <col name="ThresholdDelimiterID" type="Int" nullable="true" />
+  <col name="SearchString" type="NVarChar(MAX)" nullable="true" />
+  <col name="Comment" type="NVarChar(120)" nullable="true" />
+  <col name="CreatedDateTime" type="DateTime" />
+  <col name="CreatedByID" type="UniqueIdentifier" />
+  <col name="CreatedByScreenID" type="Char(8)" />
+  <col name="LastModifiedDateTime" type="DateTime" />
+  <col name="LastModifiedByID" type="UniqueIdentifier" />
+  <col name="LastModifiedByScreenID" type="Char(8)" />
+  <col name="tstamp" type="Timestamp" />
+  <col name="NoteID" type="UniqueIdentifier" />
+  <index name="DeltaCategoryRules_PK" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
+    <col name="RuleID" />
+    <col name="CategoryID" />
+  </index>
+</table>]]></CDATA>
+</Sql>

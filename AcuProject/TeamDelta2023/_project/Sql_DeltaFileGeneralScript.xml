@@ -1,0 +1,13 @@
+﻿<Sql TableName="DeltaFileGeneralScript" CustomScript="#CDATA">
+    <CDATA name="CustomScript"><![CDATA[CREATE OR ALTER VIEW [DeltaFileGeneral] AS
+select 
+	ulf.FileID,
+	ulf.Name,
+	dfd.Category,
+	dfd.Summary
+
+from 
+		UploadFile ulf
+		LEFT JOIN DeltaFileDetails dfd on dfd.FileID = ulf.FileID
+GO]]></CDATA>
+</Sql>

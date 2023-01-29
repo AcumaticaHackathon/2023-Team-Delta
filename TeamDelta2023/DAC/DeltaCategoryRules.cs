@@ -1,0 +1,106 @@
+using System;
+using PX.Data;
+
+namespace RulesEngine
+{
+  [Serializable]
+  [PXCacheName("DeltaCategoryRules")]
+  public class DeltaCategoryRules : IBqlTable
+  {
+    #region Ruleid
+    [PXDBIdentity(IsKey = true)]
+    public virtual int? Ruleid { get; set; }
+    public abstract class ruleid : PX.Data.BQL.BqlInt.Field<ruleid> { }
+    #endregion
+
+    #region CategoryID
+    [PXDBInt(IsKey = true)]
+    [PXSelector(typeof(Search<DeltaCategory.categoryID>),
+       DescriptionField = typeof(DeltaCategory.description),
+       SubstituteKey = typeof(DeltaCategory.name))] 
+    [PXCheckUnique(typeof(DeltaCategory.categoryID))]     
+    [PXUIField(DisplayName = "Category ID")]
+    public virtual int? CategoryID { get; set; }
+    public abstract class categoryID : PX.Data.BQL.BqlInt.Field<categoryID> { }
+    #endregion
+
+    #region WordDelimiterID
+    [PXDBInt()]
+    [PXIntList(new int[] {0, 1, 2}, new string[] {",", ";", ", or ;"})]
+    [PXUIField(DisplayName = "Word Delimiter ID")]
+    public virtual int? WordDelimiterID { get; set; }
+    public abstract class wordDelimiterID : PX.Data.BQL.BqlInt.Field<wordDelimiterID> { }
+    #endregion
+
+    #region ThresholdDelimiterID
+    [PXDBInt()]
+    [PXIntList(new int[] {0, 1, 2}, new string[] {"#", "-", "# or -"})]
+    [PXUIField(DisplayName = "Threshold Delimiter ID")]
+    public virtual int? ThresholdDelimiterID { get; set; }
+    public abstract class thresholdDelimiterID : PX.Data.BQL.BqlInt.Field<thresholdDelimiterID> { }
+    #endregion
+
+    #region SearchString
+    [PXDBString(IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Search String")]
+    public virtual string SearchString { get; set; }
+    public abstract class searchString : PX.Data.BQL.BqlString.Field<searchString> { }
+    #endregion
+
+    #region Comment
+    [PXDBString(120, IsUnicode = true, InputMask = "")]
+    [PXUIField(DisplayName = "Comment")]
+    public virtual string Comment { get; set; }
+    public abstract class comment : PX.Data.BQL.BqlString.Field<comment> { }
+    #endregion
+
+    #region CreatedDateTime
+    [PXDBCreatedDateTime()]
+    public virtual DateTime? CreatedDateTime { get; set; }
+    public abstract class createdDateTime : PX.Data.BQL.BqlDateTime.Field<createdDateTime> { }
+    #endregion
+
+    #region CreatedByID
+    [PXDBCreatedByID()]
+    public virtual Guid? CreatedByID { get; set; }
+    public abstract class createdByID : PX.Data.BQL.BqlGuid.Field<createdByID> { }
+    #endregion
+
+    #region CreatedByScreenID
+    [PXDBCreatedByScreenID()]
+    public virtual string CreatedByScreenID { get; set; }
+    public abstract class createdByScreenID : PX.Data.BQL.BqlString.Field<createdByScreenID> { }
+    #endregion
+
+    #region LastModifiedDateTime
+    [PXDBLastModifiedDateTime()]
+    public virtual DateTime? LastModifiedDateTime { get; set; }
+    public abstract class lastModifiedDateTime : PX.Data.BQL.BqlDateTime.Field<lastModifiedDateTime> { }
+    #endregion
+
+    #region LastModifiedByID
+    [PXDBLastModifiedByID()]
+    public virtual Guid? LastModifiedByID { get; set; }
+    public abstract class lastModifiedByID : PX.Data.BQL.BqlGuid.Field<lastModifiedByID> { }
+    #endregion
+
+    #region LastModifiedByScreenID
+    [PXDBLastModifiedByScreenID()]
+    public virtual string LastModifiedByScreenID { get; set; }
+    public abstract class lastModifiedByScreenID : PX.Data.BQL.BqlString.Field<lastModifiedByScreenID> { }
+    #endregion
+
+    #region Tstamp
+    [PXDBTimestamp()]
+    [PXUIField(DisplayName = "Tstamp")]
+    public virtual byte[] Tstamp { get; set; }
+    public abstract class tstamp : PX.Data.BQL.BqlByteArray.Field<tstamp> { }
+    #endregion
+
+    #region Noteid
+    [PXNote()]
+    public virtual Guid? Noteid { get; set; }
+    public abstract class noteid : PX.Data.BQL.BqlGuid.Field<noteid> { }
+    #endregion
+  }
+}

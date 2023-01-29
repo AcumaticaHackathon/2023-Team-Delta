@@ -1,0 +1,54 @@
+﻿<Graph ClassName="DeltaFileSOOrder" Source="#CDATA" IsNew="True" FileType="NewDac">
+    <CDATA name="Source"><![CDATA[using System;
+using PX.Data;
+
+namespace RulesEngine
+{
+	[Serializable]
+	[PXCacheName("DeltaFileSOOrder")]
+	public class DeltaFileSOOrder : IBqlTable
+	{
+		#region OrderType
+		[PXDBString(2, IsFixed = true, InputMask = "")]
+		[PXUIField(DisplayName = "Order Type")]
+		public virtual string OrderType { get; set; }
+		public abstract class orderType : PX.Data.BQL.BqlString.Field<orderType> { }
+		#endregion
+
+		#region OrderNbr
+		[PXDBString(15, IsUnicode = true, InputMask = "")]
+		[PXUIField(DisplayName = "Order Nbr")]
+		public virtual string OrderNbr { get; set; }
+		public abstract class orderNbr : PX.Data.BQL.BqlString.Field<orderNbr> { }
+		#endregion
+
+		#region Fileid
+		[PXDBGuid()]
+		[PXUIField(DisplayName = "Fileid")]
+		public virtual Guid? Fileid { get; set; }
+		public abstract class fileid : PX.Data.BQL.BqlGuid.Field<fileid> { }
+		#endregion
+
+		#region Name
+		[PXDBString(255, IsUnicode = true, InputMask = "")]
+		[PXUIField(DisplayName = "Name")]
+		public virtual string Name { get; set; }
+		public abstract class name : PX.Data.BQL.BqlString.Field<name> { }
+		#endregion
+
+		#region Category
+		[PXDBString(255, IsUnicode = true, InputMask = "")]
+		[PXUIField(DisplayName = "Category")]
+		public virtual string Category { get; set; }
+		public abstract class category : PX.Data.BQL.BqlString.Field<category> { }
+		#endregion
+
+		#region Summary
+		[PXDBString(IsUnicode = true, InputMask = "")]
+		[PXUIField(DisplayName = "Summary")]
+		public virtual string Summary { get; set; }
+		public abstract class summary : PX.Data.BQL.BqlString.Field<summary> { }
+		#endregion
+	}
+}]]></CDATA>
+</Graph>

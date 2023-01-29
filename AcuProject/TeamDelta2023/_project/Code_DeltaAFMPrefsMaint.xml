@@ -1,0 +1,20 @@
+﻿<Graph ClassName="DeltaAFMPrefsMaint" Source="#CDATA" IsNew="True" FileType="NewGraph">
+    <CDATA name="Source"><![CDATA[using System;
+using PX.Data;
+
+namespace RulesEngine
+{
+  public class DeltaAFMPrefsMaint : PXGraph<DeltaAFMPrefsMaint>
+  {
+
+    public PXSave<DeltaAFMPrefs> Save;
+    public PXCancel<DeltaAFMPrefs> Cancel;
+
+
+    public PXSelect<DeltaAFMPrefs> MasterView;
+    public PXSelect<DeltaAFMPrefs> DetailsView;
+
+
+  }
+}]]></CDATA>
+</Graph>

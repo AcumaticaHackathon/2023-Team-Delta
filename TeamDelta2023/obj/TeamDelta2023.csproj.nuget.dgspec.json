@@ -1,0 +1,65 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\Acumatica ERP\\TeamDelta\\Site\\App_Data\\Projects\\TeamDelta2023\\TeamDelta2023\\TeamDelta2023.csproj": {}
+  },
+  "projects": {
+    "D:\\Acumatica ERP\\TeamDelta\\Site\\App_Data\\Projects\\TeamDelta2023\\TeamDelta2023\\TeamDelta2023.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Acumatica ERP\\TeamDelta\\Site\\App_Data\\Projects\\TeamDelta2023\\TeamDelta2023\\TeamDelta2023.csproj",
+        "projectName": "TeamDelta2023",
+        "projectPath": "D:\\Acumatica ERP\\TeamDelta\\Site\\App_Data\\Projects\\TeamDelta2023\\TeamDelta2023\\TeamDelta2023.csproj",
+        "packagesPath": "C:\\Users\\burts\\.nuget\\packages\\",
+        "outputPath": "D:\\Acumatica ERP\\TeamDelta\\Site\\App_Data\\Projects\\TeamDelta2023\\TeamDelta2023\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\burts\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Microsoft.Bcl.AsyncInterfaces": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "System.Runtime.CompilerServices.Unsafe": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+﻿<Sql TableName="DeltaFileSOOrderScript" CustomScript="#CDATA">
+    <CDATA name="CustomScript"><![CDATA[CREATE OR ALTER VIEW [DeltaFileSOOrder] AS
+select 
+	so.OrderType,
+	so.OrderNbr,
+	ulf.FileID,
+	ulf.Name,
+	dfd.Category,
+	dfd.Summary
+
+from 
+	SOOrder so
+		JOIN NoteDoc on NoteDoc.NoteID = so.NoteID
+		JOIN UploadFile ulf on ulf.FileID = NoteDoc.FileID
+		LEFT JOIN DeltaFileDetails dfd on dfd.FileID = ulf.FileID
+GO]]></CDATA>
+</Sql>
